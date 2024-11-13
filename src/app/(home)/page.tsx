@@ -49,9 +49,7 @@ export default function HomePage() {
           <Badge className="animate-fade-in-up absolute right-1/4 top-32 border-blue-200 bg-blue-100 text-blue-700 delay-100">
             <Users className="mr-1 h-4 w-4" /> Team Management
           </Badge>
-          <Badge className="animate-fade-in-up absolute left-1/3 top-48 border-violet-200 bg-violet-100 text-violet-700 delay-200">
-            <Star className="mr-1 h-4 w-4" /> 4.9/5 Rating
-          </Badge>
+          
         </div>
 
         <div className="mx-auto max-w-4xl space-y-8 text-center">

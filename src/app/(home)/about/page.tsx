@@ -1,7 +1,8 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
-import { Users, Rocket, Shield, Heart, Lightbulb } from "lucide-react";
+import { stats, values, team } from "@/utils/constants/about";
+import { Users } from "lucide-react";
 
 export default function AboutSection() {
   return (
@@ -17,7 +18,6 @@ export default function AboutSection() {
       </div>
 
       <div className="mx-auto max-w-4xl">
-        {/* Story Section */}
         <div className="mb-20">
           <h3 className="mb-6 text-3xl font-bold">Our Story</h3>
           <div className="space-y-6 text-lg leading-relaxed text-gray-600">
@@ -37,7 +37,6 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Stats Section */}
         <div className="mb-20">
           <div className="grid gap-8 md:grid-cols-3">
             {stats.map((stat, index) => (
@@ -57,7 +56,6 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Values Section */}
         <div className="mb-20">
           <h3 className="mb-8 text-3xl font-bold">Our Values</h3>
           <div className="grid gap-8 md:grid-cols-2">
@@ -80,7 +78,6 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Team Section */}
         <div className="mb-16">
           <h3 className="mb-8 text-3xl font-bold">Meet the Team</h3>
           <div className="grid gap-8 md:grid-cols-3">
@@ -104,7 +101,6 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Mission Section */}
         <div className="rounded-2xl bg-violet-50 p-8 text-center">
           <h3 className="mb-4 text-2xl font-bold">Our Mission</h3>
           <p className="mx-auto max-w-2xl text-lg leading-relaxed text-gray-700">
@@ -117,66 +113,3 @@ export default function AboutSection() {
     </div>
   );
 }
-
-const stats = [
-  {
-    value: "10k+",
-    label: "Active Users",
-  },
-  {
-    value: "1M+",
-    label: "Bookings Made",
-  },
-  {
-    value: "98%",
-    label: "Customer Satisfaction",
-  },
-];
-
-const values = [
-  {
-    icon: <Heart className="h-6 w-6 text-violet-600" />,
-    title: "Customer First",
-    description:
-      "We put our customers at the heart of everything we do, ensuring their success is our top priority.",
-  },
-  {
-    icon: <Rocket className="h-6 w-6 text-violet-600" />,
-    title: "Innovation",
-    description:
-      "We continuously push boundaries to deliver cutting-edge solutions that transform scheduling experiences.",
-  },
-  {
-    icon: <Shield className="h-6 w-6 text-violet-600" />,
-    title: "Reliability",
-    description:
-      "Our platform is built on trust, ensuring dependable service that businesses can count on 24/7.",
-  },
-  {
-    icon: <Lightbulb className="h-6 w-6 text-violet-600" />,
-    title: "Simplicity",
-    description:
-      "We believe in making complex scheduling simple, with intuitive solutions that anyone can use.",
-  },
-];
-
-const team = [
-  {
-    name: "Sarah Johnson",
-    role: "CEO & Co-founder",
-    description:
-      "Leading BookFlow's mission to revolutionize appointment scheduling with over 15 years of industry experience.",
-  },
-  {
-    name: "Michael Chen",
-    role: "CTO",
-    description:
-      "Driving technical innovation with expertise in scalable systems and AI-powered scheduling solutions.",
-  },
-  {
-    name: "Emma Williams",
-    role: "Head of Product",
-    description:
-      "Crafting the future of booking experiences with a user-centered approach to product development.",
-  },
-];

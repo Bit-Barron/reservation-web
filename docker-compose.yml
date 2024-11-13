@@ -1,0 +1,21 @@
+services:
+  reservation-web:
+    container_name: reservation-web
+    restart: always
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: prod
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.reservation-web.rule=Host(`reservation.barron.agency`)"
+      - "traefik.http.routers.reservation-web.entrypoints=websecure"
+      - "traefik.http.routers.reservation-web.tls.certresolver=letsencrypt"
+      - "traefik.http.services.reservation-web.loadbalancer.server.port=3000"
+
+networks:
+  proxy:
+    external: false
+    name: proxy

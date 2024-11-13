@@ -30,9 +30,6 @@ export const Header: React.FC = ({}) => {
           </Button>
         </div>
         <div className="space-x-3">
-          <Button onClick={() => router.push("/login")} variant="outline">
-            Login
-          </Button>
           <Button
             onClick={() => router.push("/register")}
             className="bg-violet-600 hover:bg-violet-700"

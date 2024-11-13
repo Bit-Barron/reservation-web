@@ -11,7 +11,12 @@ export const Header: React.FC = ({}) => {
       <nav className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex cursor-pointer items-center space-x-2">
           <Calendar className="h-6 w-6 text-violet-600" />
-          <span className="text-xl font-bold">BookFlow</span>
+          <button
+            onClick={() => router.push("/")}
+            className="text-xl font-bold"
+          >
+            BookFlow
+          </button>
         </div>
         <div className="flex items-center space-x-4">
           <Button onClick={() => router.push("/features")} variant="ghost">
